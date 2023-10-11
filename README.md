@@ -1,5 +1,6 @@
 # Moon Phase and Birth Correlation
 
+![Birth and moon](img/birth_and_moon.jpg)
 ## Description
 
 This project aims to analyze and debunk the widely-held belief that lunar phases influence birth rates.
