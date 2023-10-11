@@ -50,10 +50,12 @@ The moon phases used in this analysis are computed using the `ephem` Python libr
 ## Results
 
 We have stated the following assumptions:
-$$H_0$$: There is no correlation between moon phases and births.
-$$H_1$$: There is a correlation between moon phases and births.
 
-To test these hypotheses, we performed an ANOVA test, which compares the means of several groups.
+$H_0$: There is no correlation between moon phases and births.
+
+$H_1$: There is a correlation between moon phases and births.
+
+We performed an ANOVA test to test these hypotheses, which compares the means of several groups.
 
 Results:
 
@@ -66,7 +68,7 @@ p-value: 0.9834
 
 ## How to Run the Code
 
-First download the dataset from StatBel website.
+First, download the dataset from StatBel website.
 
 ````shell
 $ pip install -r requirements.txt
