@@ -1,6 +1,7 @@
 from modules.moon_phase import moon_phase
 import pandas as pd
 import scipy.stats as stats
+import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
 
@@ -17,6 +18,10 @@ if __name__ == "__main__":
     # Group the DataFrame by moon phase and calculate the average number of births for each phase
     mean_births_per_moon_phase = df.groupby("moon_phase")["MS_NUM_BIRTHS"].mean()
     print(mean_births_per_moon_phase)
+
+    sum_births_per_moon_phase = df.groupby("moon_phase")[
+        "MS_NUM_BIRTHS"].sum()
+    print(sum_births_per_moon_phase)
 
     # Perform an Analysis of Variance (ANOVA) to test if the average number of births differs
     # significantly across the different moon phases
