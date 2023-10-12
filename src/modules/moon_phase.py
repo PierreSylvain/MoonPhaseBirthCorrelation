@@ -2,7 +2,7 @@ import ephem
 
 
 def moon_phase(row):
-    """Determine the moon phase based on the given date.
+    """Determine the moon phase based on the given date
         :param row: DataFrame row
         :returns: DataFrame row with 2 new columns (moon_phase and moon_emoji)
     """
@@ -10,8 +10,8 @@ def moon_phase(row):
     # Calculate the date of the previous new moon for the given date
     previous_new_moon = ephem.previous_new_moon(row['DT_DATE'])
 
-    # Calculate the age of the moon by subtracting the date of the previous new moon
-    # from the given date
+    # Calculate the age of the moon by subtracting the date of the previous
+    # new moon from the given date
     age_of_moon = (ephem.Date(row['DT_DATE']) - ephem.Date(previous_new_moon))
 
     # Determine the moon phase based on the age of the moon
@@ -41,4 +41,3 @@ def moon_phase(row):
         row['moon_emoji'] = "🌘"
 
     return row
-
